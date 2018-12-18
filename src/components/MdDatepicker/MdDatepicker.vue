@@ -24,7 +24,7 @@
   import isFirefox from 'is-firefox'
   import format from 'date-fns/format'
   import parse from 'date-fns/parse'
-  import isValid from 'date-fns/isValid'
+  import isValid from 'date-fns/is_valid'
   import MdPropValidator from 'core/utils/MdPropValidator'
   import MdOverlay from 'components/MdOverlay/MdOverlay'
   import MdDatepickerDialog from './MdDatepickerDialog'
