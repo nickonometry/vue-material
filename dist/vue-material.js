@@ -23404,15 +23404,6 @@ var render = function() {
       attrs: { "md-clearable": "" }
     },
     [
-      _c("md-date-icon", {
-        staticClass: "md-date-icon",
-        nativeOn: {
-          click: function($event) {
-            return _vm.toggleDialog($event)
-          }
-        }
-      }),
-      _vm._v(" "),
       _c("md-input", {
         ref: "input",
         attrs: { type: _vm.type, pattern: _vm.pattern },
@@ -23453,6 +23444,15 @@ var render = function() {
         ],
         1
       ),
+      _vm._v(" "),
+      _c("md-date-icon", {
+        staticClass: "md-date-icon",
+        nativeOn: {
+          click: function($event) {
+            return _vm.toggleDialog($event)
+          }
+        }
+      }),
       _vm._v(" "),
       _c("md-overlay", {
         staticClass: "md-datepicker-overlay",

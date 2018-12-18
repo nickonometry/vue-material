@@ -1,6 +1,6 @@
 <template>
   <md-field :class="['md-datepicker', { 'md-native': !this.mdOverrideNative }]" md-clearable>
-    <md-date-icon class="md-date-icon" @click.native="toggleDialog" />
+    
     <md-input :type="type" ref="input" v-model="inputDate" @focus.native="onFocus" :pattern="pattern" />
 
     <slot />
@@ -14,7 +14,7 @@
         @md-closed="toggleDialog"
       />
     </keep-alive>
-
+    <md-date-icon class="md-date-icon" @click.native="toggleDialog" />
     <md-overlay class="md-datepicker-overlay" md-fixed :md-active="showDialog" @click="toggleDialog" />
   </md-field>
 </template>
