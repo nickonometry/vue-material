@@ -23399,10 +23399,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "md-field",
-    {
-      class: ["md-datepicker", { "md-native": !this.mdOverrideNative }],
-      attrs: { "md-clearable": "" }
-    },
+    { class: ["md-datepicker", { "md-native": !this.mdOverrideNative }] },
     [
       _c("md-input", {
         ref: "input",

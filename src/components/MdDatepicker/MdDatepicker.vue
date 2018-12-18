@@ -1,5 +1,5 @@
 <template>
-  <md-field :class="['md-datepicker', { 'md-native': !this.mdOverrideNative }]" md-clearable>
+  <md-field :class="['md-datepicker', { 'md-native': !this.mdOverrideNative }]">
     
     <md-input :type="type" ref="input" v-model="inputDate" @focus.native="onFocus" :pattern="pattern" />
 
