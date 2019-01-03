@@ -5073,6 +5073,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 //
 //
 //
+//
 
 var _MdComponent = __webpack_require__(1);
 
@@ -18228,15 +18229,23 @@ var render = function() {
               "md-duplicated": _vm.duplicatedChip === chip
             },
             on: {
-              keydown: function($event) {
-                if (
-                  !("button" in $event) &&
-                  _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
-                ) {
-                  return null
+              keydown: [
+                function($event) {
+                  if (
+                    !("button" in $event) &&
+                    _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+                  ) {
+                    return null
+                  }
+                  _vm.$emit("md-click", chip, key)
+                },
+                function($event) {
+                  if (!("button" in $event) && $event.keyCode !== 188) {
+                    return null
+                  }
+                  _vm.$emit("md-click", chip, key)
                 }
-                _vm.$emit("md-click", chip, key)
-              },
+              ],
               "md-delete": function($event) {
                 $event.stopPropagation()
                 _vm.removeChip(chip)

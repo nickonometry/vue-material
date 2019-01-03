@@ -9,6 +9,7 @@
       :md-clickable="!mdStatic"
       :md-duplicated="duplicatedChip === chip"
       @keydown.enter="$emit('md-click', chip, key)"
+      @keydown.188="$emit('md-click', chip, key)"
       @click.native="$emit('md-click', chip, key)"
       @md-delete.stop="removeChip(chip)">
       <slot name="md-chip" :chip="chip" v-if="$scopedSlots['md-chip']">{{ chip }}</slot>
