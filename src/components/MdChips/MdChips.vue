@@ -88,7 +88,6 @@
     },
     methods: {
       insertChip (event) {
-        event.preventDefault()
         let inputValue = this.formattedInputValue
 
         if (!inputValue || !this.modelRespectLimit) {
@@ -108,6 +107,7 @@
         this.$emit('input', this.value)
         this.$emit('md-insert', inputValue)
         this.inputValue = ''
+        event.target.value = ''
       },
       removeChip (chip) {
         const index = this.value.indexOf(chip)

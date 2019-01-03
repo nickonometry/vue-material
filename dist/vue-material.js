@@ -5150,7 +5150,6 @@ exports.default = new _MdComponent2.default({
     insertChip: function insertChip(event) {
       var _this = this;
 
-      event.preventDefault();
       var inputValue = this.formattedInputValue;
 
       if (!inputValue || !this.modelRespectLimit) {
@@ -5170,6 +5169,7 @@ exports.default = new _MdComponent2.default({
       this.$emit('input', this.value);
       this.$emit('md-insert', inputValue);
       this.inputValue = '';
+      event.target.value = '';
     },
     removeChip: function removeChip(chip) {
       var _this2 = this;
