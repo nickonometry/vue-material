@@ -18287,7 +18287,7 @@ var render = function() {
                   if (!("button" in $event) && $event.keyCode !== 188) {
                     return null
                   }
-                  return _vm.handleBackRemove($event)
+                  return _vm.insertChip($event)
                 }
               ]
             },

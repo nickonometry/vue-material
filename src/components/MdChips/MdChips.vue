@@ -25,7 +25,7 @@
       @input="handleInput"
       @keydown.enter="insertChip"
       @keydown.8="handleBackRemove"
-      @keydown.188="handleBackRemove">
+      @keydown.188="insertChip">
     </md-input>
   </md-field>
 </template>
