@@ -5066,13 +5066,6 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
 
 var _MdComponent = __webpack_require__(1);
 
@@ -5169,7 +5162,9 @@ exports.default = new _MdComponent2.default({
       this.$emit('input', this.value);
       this.$emit('md-insert', inputValue);
       this.inputValue = '';
-      event.target.value = '';
+      setTimeout(function () {
+        event.target.value = '';
+      });
     },
     removeChip: function removeChip(chip) {
       var _this2 = this;
@@ -18250,7 +18245,7 @@ var render = function() {
           [
             _vm.$scopedSlots["md-chip"]
               ? _vm._t("md-chip", [_vm._v(_vm._s(chip))], { chip: chip })
-              : [_vm._v(_vm._s(chip))]
+              : [_vm._v(_vm._s(chip) + "\n")]
           ],
           2
         )
