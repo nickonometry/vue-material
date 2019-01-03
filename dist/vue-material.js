@@ -5147,12 +5147,10 @@ exports.default = new _MdComponent2.default({
     }
   },
   methods: {
-    insertChip: function insertChip(_ref) {
+    insertChip: function insertChip(event) {
       var _this = this;
 
-      var target = _ref.target;
-
-      target.preventDefault();
+      event.preventDefault();
       var inputValue = this.formattedInputValue;
 
       if (!inputValue || !this.modelRespectLimit) {

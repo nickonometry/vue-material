@@ -87,8 +87,8 @@
       }
     },
     methods: {
-      insertChip ({ target }) {
-        target.preventDefault()
+      insertChip (event) {
+        event.preventDefault()
         let inputValue = this.formattedInputValue
 
         if (!inputValue || !this.modelRespectLimit) {
