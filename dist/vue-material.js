@@ -1,6 +1,6 @@
 /*!
  * vue-material v1.0.0-beta-10.2
- * Made with <3 by marcosmoura 2018
+ * Made with <3 by marcosmoura 2019
  * Released under the MIT License.
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -5042,6 +5042,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; //
+//
 //
 //
 //
@@ -18278,6 +18279,12 @@ var render = function() {
                 },
                 function($event) {
                   if (!("button" in $event) && $event.keyCode !== 8) {
+                    return null
+                  }
+                  return _vm.handleBackRemove($event)
+                },
+                function($event) {
+                  if (!("button" in $event) && $event.keyCode !== 188) {
                     return null
                   }
                   return _vm.handleBackRemove($event)
