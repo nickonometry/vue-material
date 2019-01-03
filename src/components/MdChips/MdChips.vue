@@ -24,7 +24,8 @@
       :placeholder="mdPlaceholder"
       @input="handleInput"
       @keydown.enter="insertChip"
-      @keydown.8="handleBackRemove">
+      @keydown.8="handleBackRemove"
+      @keydown.188="handleBackRemove">
     </md-input>
   </md-field>
 </template>
