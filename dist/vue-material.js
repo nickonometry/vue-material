@@ -5073,7 +5073,6 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 //
 //
 //
-//
 
 var _MdComponent = __webpack_require__(1);
 
@@ -5153,6 +5152,7 @@ exports.default = new _MdComponent2.default({
 
       var target = _ref.target;
 
+      target.preventDefault();
       var inputValue = this.formattedInputValue;
 
       if (!inputValue || !this.modelRespectLimit) {
@@ -18229,23 +18229,15 @@ var render = function() {
               "md-duplicated": _vm.duplicatedChip === chip
             },
             on: {
-              keydown: [
-                function($event) {
-                  if (
-                    !("button" in $event) &&
-                    _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
-                  ) {
-                    return null
-                  }
-                  _vm.$emit("md-click", chip, key)
-                },
-                function($event) {
-                  if (!("button" in $event) && $event.keyCode !== 188) {
-                    return null
-                  }
-                  _vm.$emit("md-click", chip, key)
+              keydown: function($event) {
+                if (
+                  !("button" in $event) &&
+                  _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+                ) {
+                  return null
                 }
-              ],
+                _vm.$emit("md-click", chip, key)
+              },
               "md-delete": function($event) {
                 $event.stopPropagation()
                 _vm.removeChip(chip)
@@ -18284,7 +18276,8 @@ var render = function() {
                   ) {
                     return null
                   }
-                  return _vm.insertChip($event)
+                  _vm.insertChip
+                  _vm.preventDefault()
                 },
                 function($event) {
                   if (!("button" in $event) && $event.keyCode !== 8) {
@@ -18296,7 +18289,8 @@ var render = function() {
                   if (!("button" in $event) && $event.keyCode !== 188) {
                     return null
                   }
-                  return _vm.insertChip($event)
+                  _vm.insertChip
+                  _vm.preventDefault()
                 }
               ]
             },
